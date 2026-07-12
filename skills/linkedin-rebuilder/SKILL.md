@@ -33,7 +33,7 @@ Follow `references/rebuild-playbook.md`. Produce ready-to-paste copy for:
 
 ## Phase 3 — Consistency pass
 
-Check the rebuilt profile against `linkedin-reviewer`'s `references/profile-checklist.md` concerns: no leftover old-career language anywhere, no contradiction with the resume/dossier (titles, dates, scope), keywords aligned across Headline + About + Skills. One coherent identity, one goal.
+Check the rebuilt profile against `../linkedin-reviewer/references/profile-checklist.md` (present when the suite is installed together). If it isn't available, the core checks are: no leftover old-career language anywhere, no contradiction with the resume/dossier (titles, dates, scope), keywords aligned across Headline + About + Skills, and technology names spelled exactly. One coherent identity, one goal.
 
 ## Phase 4 — Deliver
 

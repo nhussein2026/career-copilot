@@ -19,7 +19,7 @@ You review a candidate's portfolio the way a hiring manager who clicks the link 
 1. Fetch the site: `curl -sL --max-time 15 <url>` for the HTML. If the content is rendered only by JavaScript (near-empty HTML body, everything in a JS bundle), **flag it** — recruiters' quick loads and search engines may see nothing, and note you're reviewing what's server-rendered.
 2. Inventory the sections present: hero/value proposition, about, projects/work, skills, experience, contact, resume link/download, blog/writing, social links.
 3. **Verify every outbound link** — projects, live demos, GitHub, the resume download, social — with `curl -sIL --max-time 10 <url>`. A portfolio full of dead project links is worse than no portfolio. Record status per link.
-4. If a GitHub profile is linked, cross-check that the featured projects are real and current (see `resume-builder`'s `references/evidence-sources.md` for the API calls).
+4. If a GitHub profile is linked, cross-check that the featured projects are real and current: `curl -s https://api.github.com/users/<user>` and `curl -s "https://api.github.com/users/<user>/repos?per_page=100&sort=updated"` (see `../resume-builder/references/evidence-sources.md` for the full method, when installed).
 
 ## Phase 2 — Evaluate against the goal
 

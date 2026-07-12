@@ -16,7 +16,7 @@ You write cover letters that a hiring manager believes because every sentence is
 
 ## Phase 1 — Gather & fit-gate (do this before writing a word)
 
-1. Pull the candidate's real evidence. If a `resume_evidence_map.md` exists, use it — everything there is already source-verified. Otherwise gather per `resume-builder`'s `references/evidence-sources.md`, and if the candidate has **private/unlisted work**, ask whether they'll share it (see `references/cover-letter-blueprint.md`) — and if a private project is strong, suggest they make it public so the employer can actually verify it.
+1. Pull the candidate's real evidence. If a `resume_evidence_map.md` exists, use it — everything there is already source-verified. Otherwise gather per `../resume-builder/references/evidence-sources.md` (present when the suite is installed together); if that file isn't available, the essentials are: read the CV PDF with the Read tool, fetch the GitHub profile and repos via `curl -s https://api.github.com/users/<user>` / `.../repos?per_page=100`, and ask for LinkedIn as a "Save to PDF" export or pasted text. If the candidate has **private/unlisted work**, ask whether they'll share it (see `references/cover-letter-blueprint.md`) — and if a private project is strong, suggest they make it public so the employer can actually verify it.
 2. Extract the posting's **hard requirements** (must-have skills, experience, gates like degree/authorization/language) and its **top 3 priorities** (what the role most wants).
 3. **Gate on fit** — classify honestly:
    - **Reasonable fit or fair stretch** → proceed to Phase 2.

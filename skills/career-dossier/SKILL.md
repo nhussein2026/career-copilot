@@ -16,7 +16,7 @@ All optional; use whatever the candidate provides (more sources = richer dossier
 
 ## Phase 1 — Gather everything
 
-Use `career-copilot`'s shared gathering method — the same one in `resume-builder`'s `references/evidence-sources.md` if available (read the resume's hidden links, fetch GitHub profile/repos/languages/contributions, capture full LinkedIn, fetch the portfolio). Two rules carry over:
+Use the suite's shared gathering method — `../resume-builder/references/evidence-sources.md` (present when the suite is installed together). If that file isn't available, the essentials are: read the resume PDF with the Read tool and pull the URLs hidden behind anchor text from its annotation layer (PyMuPDF `page.get_links()`); fetch GitHub via `curl -s https://api.github.com/users/<user>` and `curl -s "https://api.github.com/users/<user>/repos?per_page=100&sort=updated"`, plus per-repo `languages` and `contributors`; for LinkedIn ask for the "Save to PDF" export or pasted text if the URL is login-walled; fetch the portfolio with `curl -sL`. Two rules carry over:
 - **Private work:** ask whether the candidate has private/unlisted repos to include; if a private project is strong, suggest making it public.
 - **Ambiguous repos:** when you can't tell if a repo is the candidate's real work or what it does (forks, clones, cryptic names), ask rather than guess.
 
