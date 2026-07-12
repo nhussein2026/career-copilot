@@ -39,7 +39,7 @@ Walk through every item of `references/ats-guidelines.md` against the PDF (use w
 
 ## Phase 4 — Report
 
-Write `cv_review_report.md` in the same directory as the CV:
+Write `cv_review_report.md` in `career-copilot-output/resume/` (create the folder if it doesn't exist):
 
 1. **Score summary** — table: category, score/max, one-line evidence. Then bonus, deductions, total.
 2. **Detailed findings** — per category: what earned points, what capped them, which rules fired (with the rule quoted briefly).
@@ -49,7 +49,7 @@ Write `cv_review_report.md` in the same directory as the CV:
 
 ## Phase 5 — Improved draft
 
-Write `cv_improved_draft.md` next to the report: the full CV rewritten in clean Markdown, ready to paste into Word/Google Docs.
+Write `cv_improved_draft.md` next to the report in `career-copilot-output/resume/`: the full CV rewritten in clean Markdown, ready to paste into Word/Google Docs.
 
 Rules for the draft:
 - Mirror the original section structure but use ATS-safe standard headings (Summary, Experience, Projects, Education, Skills, Awards).

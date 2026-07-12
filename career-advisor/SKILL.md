@@ -36,7 +36,7 @@ Lay it out as a sequenced roadmap with rough milestones (e.g. 0–1 month, 1–3
 
 ## Phase 4 — Deliver
 
-Write `career_plan.md` in the working directory:
+Write `career_plan.md` in `career-copilot-output/profile/` (create the folder if it doesn't exist):
 
 1. **Where you are** — honest snapshot of relevant strengths and constraints.
 2. **Target & gap** — the gap table.

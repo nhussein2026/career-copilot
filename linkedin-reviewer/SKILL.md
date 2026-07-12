@@ -35,7 +35,7 @@ Walk every item in `references/profile-checklist.md`. For each section, record: 
 
 ## Phase 4 — Report + rewrites
 
-Write `linkedin_review.md` in the working directory:
+Write `linkedin_review.md` in `career-copilot-output/linkedin/` (create the folder if it doesn't exist):
 
 1. **Completeness score** — a simple table: section → status (strong / weak / missing) → why.
 2. **Prioritized fix list** — High / Medium / Low by recruiter impact. High = the Headline, the About hook, missing photo/custom URL, or an empty Skills section.

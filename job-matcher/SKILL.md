@@ -38,7 +38,7 @@ For each posting, produce a fit read:
 
 ## Phase 4 — Deliver
 
-Write `job_search.md` in the working directory:
+Write `job_search.md` in `career-copilot-output/jobs/` (create the folder if it doesn't exist):
 
 1. **Target roles** — the 1–3 titles and their synonyms.
 2. **Boolean strings** — broad and precise, per platform, ready to paste.
