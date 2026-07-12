@@ -1,0 +1,13 @@
+{
+  "name": "career-copilot",
+  "version": "0.2.0",
+  "description": "A suite of career skills that help you land a job: build your master profile, write and review your resume, rebuild your LinkedIn, tune your portfolio and GitHub, plan your next move, run a focused job search, and write honest cover letters — grounded, never invented.",
+  "author": {
+    "name": "Nasser Hussein",
+    "url": "https://github.com/nhussein2026"
+  },
+  "homepage": "https://github.com/nhussein2026/career-copilot",
+  "repository": "https://github.com/nhussein2026/career-copilot",
+  "license": "MIT",
+  "keywords": ["career", "resume", "cv", "linkedin", "portfolio", "job-search", "cover-letter", "interview"]
+}

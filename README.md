@@ -1,6 +1,6 @@
 # career-copilot
 
-A suite of [Claude Code](https://claude.com/claude-code) **skills** that help you land a job — build your master profile, write and review your CV, rebuild your LinkedIn, tune your portfolio, plan your next move, run a focused job search, and write honest cover letters. Each skill is self-contained: a `SKILL.md` that tells the model how to do the job, plus `references/` files holding the detailed rubrics and checklists it loads on demand.
+A suite of [Claude Code](https://claude.com/claude-code) **skills** that help you land a job — build your master profile, write and review your CV, rebuild your LinkedIn, tune your portfolio, plan your next move, run a focused job search, and write honest cover letters. Each skill is a folder: a `SKILL.md` that tells the model how to do the job, plus `references/` files holding the detailed rubrics and checklists it loads on demand. The skills are designed to work as a set — several reuse each other's references and outputs — so install them together (the plugin does this in one command).
 
 **New here?** Just say *"help me get a job"* (or your goal) and [`career-onboarding`](career-onboarding/) figures out which skills to run, in what order.
 
@@ -19,45 +19,44 @@ A suite of [Claude Code](https://claude.com/claude-code) **skills** that help yo
 | [`job-matcher`](job-matcher/) | Turns your background into a focused job search: boolean search strings, where to look, alerts, and a fit assessment for specific postings. |
 | [`cover-letter`](cover-letter/) | Gates on fit first — tells you honestly when a role isn't worth applying to — then writes a truthful, tailored cover letter from your real evidence, mapped to the posting's priorities. |
 
-Each skill's folder contains:
+Each skill's folder (under `skills/`) contains:
 
 ```
-<skill>/
+skills/<skill>/
 ├── SKILL.md            # the instructions (with YAML frontmatter: name + description)
 └── references/         # rubrics, checklists, and guides loaded on demand
 ```
 
 ## Install
 
-Claude Code discovers skills in two locations:
+### As a plugin (recommended — one command, everything works together)
+
+This repo is a Claude Code **plugin** and its own marketplace. In Claude Code:
+
+```
+/plugin marketplace add nhussein2026/career-copilot
+/plugin install career-copilot@career-copilot
+```
+
+That installs all the skills at once — which also keeps the cross-skill hand-offs working (the dossier feeding the resume, the evidence map feeding the cover letter).
+
+### Manual copy
+
+Claude Code also discovers skills in two locations:
 
 - **Personal** (available in every project): `~/.claude/skills/`
 - **Project** (shared with a repo, e.g. via version control): `<your-project>/.claude/skills/`
 
-Install a skill by copying its folder into one of those directories.
-
-### Install one skill
-
 ```bash
-# personal — available everywhere
+# all skills (recommended — several skills reuse their siblings' references)
 mkdir -p ~/.claude/skills
-cp -r resume-reviewer ~/.claude/skills/
+cp -r skills/* ~/.claude/skills/
+
+# or a single skill — it still works alone, with a reduced version of the shared methods
+cp -r skills/resume-reviewer ~/.claude/skills/
 ```
 
-```bash
-# or into a specific project
-mkdir -p /path/to/your-project/.claude/skills
-cp -r resume-reviewer /path/to/your-project/.claude/skills/
-```
-
-### Install all skills
-
-```bash
-mkdir -p ~/.claude/skills
-cp -r career-onboarding career-dossier resume-builder resume-reviewer linkedin-reviewer linkedin-rebuilder portfolio-reviewer career-advisor job-matcher cover-letter ~/.claude/skills/
-```
-
-After copying, start (or restart) Claude Code and the skills become available. You can confirm with `/skills` or by describing your task — Claude picks the matching skill automatically based on its `description`.
+After installing, start (or restart) Claude Code and the skills become available. You can confirm with `/skills` or by describing your task — Claude picks the matching skill automatically based on its `description`.
 
 ## Getting started
 
