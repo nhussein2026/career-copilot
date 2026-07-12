@@ -1,5 +1,5 @@
 ---
-name: cv-review
+name: resume-reviewer
 description: Evaluate a CV/resume the way an LLM hiring screener would, audit it for ATS-friendliness, and produce a prioritized fix list plus a rewritten CV draft. Use when the user asks to evaluate, score, review, or improve their CV/resume, or asks for an ATS check. Takes a CV PDF path and optionally a job description (file path or pasted text) for keyword matching.
 argument-hint: <cv.pdf> [job-description file or pasted JD text]
 ---

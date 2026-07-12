@@ -1,5 +1,5 @@
 ---
-name: linkedin-rebuild
+name: linkedin-rebuilder
 description: Rebuild an entire LinkedIn profile so every section pulls toward one goal — produce ready-to-paste copy for the headline, About, each Experience entry, Skills, and Featured, plus the profile-hygiene fixes, aligned end-to-end to a single target role. Includes a guide for sharing the profile since LinkedIn blocks automated access. Use when the user wants to rebuild, overhaul, or fully rewrite their LinkedIn (not just audit it — that's linkedin-reviewer). Takes the profile (URL/PDF/paste) and a target role/goal, optionally the resume or dossier.
 argument-hint: <linkedin url/pdf/paste> <target role or goal> [resume or dossier]
 ---

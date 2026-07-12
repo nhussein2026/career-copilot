@@ -1,5 +1,5 @@
 ---
-name: linkedin-review
+name: linkedin-reviewer
 description: Review a LinkedIn profile the way a recruiter and LinkedIn's search ranking would, then produce a prioritized fix list and rewritten copy for the weak sections. Use when the user asks to review, audit, optimize, or improve their LinkedIn profile, or to make it more discoverable to recruiters. Takes a LinkedIn profile URL, a PDF export of the profile, or pasted profile text, and optionally a target role/job description for keyword alignment.
 argument-hint: <linkedin-url | profile.pdf | pasted profile text> [target role or job description]
 ---

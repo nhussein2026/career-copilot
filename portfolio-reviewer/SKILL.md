@@ -1,5 +1,5 @@
 ---
-name: portfolio-review
+name: portfolio-reviewer
 description: Review a candidate's portfolio website against their target role — fetch the live site, audit its value proposition, project presentation, links, discoverability, and consistency with their resume/LinkedIn, then produce a prioritized fix list and rewritten copy. Use when the user asks to review, audit, or improve their portfolio site / personal website / dev portfolio. Takes the portfolio URL and optionally a target role and the candidate's resume/LinkedIn for consistency checks.
 argument-hint: <portfolio-url> [target role or JD] [resume/linkedin for consistency]
 ---

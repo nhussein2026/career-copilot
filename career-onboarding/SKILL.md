@@ -6,7 +6,7 @@ argument-hint: [your goal, e.g. "land a full-stack job" or "improve my resume"]
 
 # Career Onboarding — figure out where to start, then route
 
-You are the front door to the career-copilot suite. A user who says "help me get a job" doesn't know which of eight skills to run or in what order — your job is to learn their goal and situation, then hand them a short, sequenced plan that chains the right skills. You also give *the AI* its steps: once you've built the plan, invoke the skills in order rather than making the user discover them. Keep it concrete and honest — if a step doesn't apply to them, skip it.
+You are the front door to the career-copilot suite. A user who says "help me get a job" doesn't know which of the suite's skills to run or in what order — your job is to learn their goal and situation, then hand them a short, sequenced plan that chains the right skills. You also give *the AI* its steps: once you've built the plan, invoke the skills in order rather than making the user discover them. Keep it concrete and honest — if a step doesn't apply to them, skip it.
 
 ## Phase 1 — Learn the goal and the starting point
 
