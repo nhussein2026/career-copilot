@@ -10,14 +10,15 @@ You are acting as a technical recruiter plus a LinkedIn SEO coach. Recruiters sk
 
 ## Arguments
 
-- First argument: the profile. A LinkedIn URL (fetch it if reachable; if the fetch is blocked by login walls, ask the user to paste the profile text or attach the "Save to PDF" export from their profile's *More* menu), a PDF export, or pasted text.
-- Remaining arguments (optional): a target role title or a job description. If present, run keyword alignment against it; if absent, evaluate against the candidate's own most recent role and say so.
+- First argument: the profile. Check `career-copilot-input/linkedin.pdf` or `linkedin.txt` first; otherwise a LinkedIn URL (fetch it if reachable; if the fetch is blocked by login walls, ask the user to paste the profile text or attach the "Save to PDF" export from their profile's *More* menu), a PDF export, or pasted text.
+- Remaining arguments (optional): a target role title or a job description — check `career-copilot-input/target.txt` first. If present, run keyword alignment against it; if absent, evaluate against the candidate's own most recent role and say so.
 
 ## Phase 1 — Gather
 
 1. Get the full profile content: headline, About, every Experience entry, Education, Skills, Licenses & Certifications, Projects, Recommendations, and the custom URL.
 2. Note what's visually or structurally missing — no profile photo, default banner, empty About, "Skills" with fewer than 5 entries, no custom vanity URL (`/in/firstname-lastname`), no recent activity.
 3. If a target role/JD is provided, extract its hard skills, title language, and seniority signals for Phase 3.
+4. If suite outputs exist (`career-copilot-output/profile/dossier.md`, `career-copilot-output/resume/resume_draft.md`), use them to cross-check claims (titles, dates, scope) and as the honest keyword source for rewrites.
 
 ## Phase 2 — Section-by-section audit
 

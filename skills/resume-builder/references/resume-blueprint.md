@@ -37,7 +37,7 @@ Weak → strong (same underlying fact, better articulated):
 
 ## ATS-safe formatting (non-negotiable)
 
-The draft must parse cleanly in automated screeners. Follow every point; these mirror the repo's `resume-reviewer/references/ats-guidelines.md`:
+The draft must parse cleanly in automated screeners. Follow every point; these mirror the suite's `../../resume-reviewer/references/ats-guidelines.md`:
 
 - **Single column.** No tables, text boxes, or multi-column layouts carrying content.
 - **Standard headings** only: Summary, Experience, Projects, Education, Skills, Certifications, Awards. No letter-spaced or stylized headings ("E X P E R I E N C E").

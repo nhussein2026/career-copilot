@@ -10,8 +10,8 @@ You are acting as a hiring screener + CV coach. Run all five phases in order and
 
 ## Arguments
 
-- First argument: path to the CV PDF. If missing, look for a single `*.pdf` that looks like a CV in the current directory; if ambiguous, ask.
-- Remaining arguments (optional): a job description — either a file path or pasted text. If present, Phase 3 includes keyword-gap analysis; if absent, skip JD matching and say so in the report.
+- First argument: path to the CV PDF. If missing, check `career-copilot-input/resume.pdf` (or `.md`), then look for a single `*.pdf` that looks like a CV in the current directory; if still ambiguous, ask.
+- Remaining arguments (optional): a job description — either a file path, `career-copilot-input/target.txt`, or pasted text. If present, Phase 3 includes keyword-gap analysis; if absent, skip JD matching and say so in the report.
 
 ## Phase 1 — Extract
 
@@ -27,9 +27,10 @@ You are acting as a hiring screener + CV coach. Run all five phases in order and
 
 Apply the rubric in `references/scoring-rubric.md` exactly. Key mechanics:
 
-- Four categories: Open Source /35, Self Projects /30, Production /25, Technical Skills /10. Plus bonus (≤20) and deductions. Total capped at 120.
+- **Select the rubric profile first** (the rubric's opening section): A = student/early-career SWE, B = experienced SWE (3+ years), C = non-SWE field. The category weights differ per profile — using the wrong one mis-scores the candidate. State in the report which profile you applied and why.
+- Four categories totaling 100 (weights per the selected profile), plus bonus (≤20) and deductions. Total capped at 120.
 - **Verify every project URL, live demo, and portfolio link with `curl -sIL --max-time 10 <url>`** and apply link penalties based on the real result (2xx/3xx = working; 4xx/5xx/timeout = broken), not on what the CV claims.
-- Enforce the critical rules: personal repos alone cap Open Source at ≤10; basic CRUD self-projects score 0; tutorial projects trigger deductions; fairness rules (ignore name, school, GPA, location).
+- Enforce the selected profile's hard rules (e.g. Profile A: personal repos alone cap Open Source at ≤10; basic CRUD self-projects score 0; tutorial projects trigger deductions. Profile B: titles alone earn nothing; missing GitHub is not deducted) and the fairness rules (ignore name, school, GPA, location).
 - A repo with 2+ contributors that the candidate OWNS is still a personal project with a collaborator, not an open-source contribution — contribution means merged work in projects the candidate doesn't own.
 - Cite evidence for every score band you assign.
 
@@ -41,7 +42,7 @@ Walk through every item of `references/ats-guidelines.md` against the PDF (use w
 
 Write `cv_review_report.md` in `career-copilot-output/resume/` (create the folder if it doesn't exist):
 
-1. **Score summary** — table: category, score/max, one-line evidence. Then bonus, deductions, total.
+1. **Score summary** — the rubric profile applied (and why), then a table: category, score/max, one-line evidence. Then bonus, deductions, total.
 2. **Detailed findings** — per category: what earned points, what capped them, which rules fired (with the rule quoted briefly).
 3. **Link verification results** — table of every URL checked and its status.
 4. **ATS audit** — pass/fail per checklist group, with the specific offending element for each fail. JD keyword gaps if applicable.

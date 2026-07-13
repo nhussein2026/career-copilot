@@ -10,9 +10,9 @@ You review a candidate's portfolio the way a hiring manager who clicks the link 
 
 ## Arguments
 
-- **Portfolio URL** (required) — the live site. Fetch it.
-- **Target role / JD** (optional) — what the portfolio should be optimized to land. If absent, infer from the site's own positioning and say so.
-- **Resume / LinkedIn** (optional) — to check the portfolio tells the same story (titles, projects, dates must not contradict).
+- **Portfolio URL** (required) — the live site. Check `career-copilot-input/portfolio.txt` first, then fetch it.
+- **Target role / JD** (optional) — check `career-copilot-input/target.txt` first. What the portfolio should be optimized to land. If absent, infer from the site's own positioning and say so.
+- **Resume / LinkedIn** (optional) — check `career-copilot-output/profile/dossier.md` or `career-copilot-input/resume.pdf`/`linkedin.pdf` — to confirm the portfolio tells the same story (titles, projects, dates must not contradict).
 
 ## Phase 1 — Fetch & inventory
 

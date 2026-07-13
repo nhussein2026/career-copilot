@@ -10,8 +10,8 @@ You write cover letters that a hiring manager believes because every sentence is
 
 ## Arguments
 
-- **Candidate background** — a CV/résumé, a career dossier, GitHub/LinkedIn, or (best) the outputs of `resume-builder` (`resume_draft.md` + `resume_evidence_map.md`) if they exist in the working directory. Reuse an existing evidence map rather than re-gathering.
-- **Job posting** — a URL (fetch it) or pasted text. Required — the letter is tailored to it.
+- **Candidate background** — best: the outputs of `resume-builder` (`resume_draft.md` + `resume_evidence_map.md`) or `career-dossier` (`dossier.md`) if they exist in the working directory — reuse them rather than re-gathering. Otherwise check `career-copilot-input/` (resume/GitHub/LinkedIn) before asking.
+- **Job posting** — a URL (fetch it), pasted text, or `career-copilot-input/target.txt`. Required — the letter is tailored to it.
 - **Tone** (optional) — default to warm-professional. Match the company's register (a startup reads differently from a bank).
 
 ## Phase 1 — Gather & fit-gate (do this before writing a word)
@@ -38,7 +38,7 @@ Follow `references/cover-letter-blueprint.md`:
 
 ## Phase 4 — Deliver
 
-Write `cover_letter.md` in `career-copilot-output/jobs/<company>/` (create the folder if it doesn't exist — one subfolder per company you apply to). Under a short rule, add a "Notes" block: which proof points you used, which gap you addressed and how, and any `[confirm: …]` placeholder (e.g. a specific detail only the candidate can supply). Offer to render it to PDF and to align it with the tailored resume.
+Write `cover_letter.md` in `career-copilot-output/jobs/<company>/` (create the folder if it doesn't exist — one subfolder per company you apply to). Under a short rule, add a "Notes" block: which proof points you used, which gap you addressed and how, and any `[confirm: …]` placeholder (e.g. a specific detail only the candidate can supply). Offer to render it to PDF (`resume-renderer`'s render routes work for letters too) and to align it with the tailored resume. When the candidate confirms they submitted, update `career-copilot-output/jobs/applications.md` (per `application-tracker`, when in use): the row flips to `applied` with the follow-up cadence as its next action.
 
 ## Final response
 

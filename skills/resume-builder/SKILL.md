@@ -18,6 +18,8 @@ All optional, but you need at least one evidence source. Ask for what's missing 
 
 ## Phase 1 — Gather from every source
 
+**Check for existing suite outputs first:** if `career-copilot-output/profile/dossier.md` exists, it's already consolidated and source-tagged — build from it and only gather what it lacks or marks unconfirmed, instead of re-interrogating every source (and the candidate) from scratch.
+
 Work through `references/evidence-sources.md` for each source the candidate gave. Build one raw evidence inventory that records, for every item, **which source it came from** — you'll need that trail in Phase 5. Extract hyperlink URLs from the old resume's annotation layer (see the reference), fetch the GitHub profile/repos/languages/pinned work, and capture the full LinkedIn content including Experience bullets, Projects, and Recommendations (others describing your impact is high-grade evidence). The API only sees public repos — **ask** whether the candidate has private/unlisted work to share, and if a private project is strong, suggest they make it public so an employer can verify it (see the reference). Degrade gracefully: if a source is unreachable or offline, note it and build from what you have.
 
 ## Phase 2 — Surface the hidden value
@@ -38,15 +40,16 @@ This is the phase that earns the skill its name. Cross-reference the sources aga
 
 ## Phase 4 — Structure & write
 
-Follow `references/resume-blueprint.md`:
-- Choose and order sections by relevance to the target role; lead with the candidate's strongest evidence.
-- Write every bullet in impact form — **action verb + what was built/done + scope + measurable outcome** — using only numbers that appear in the evidence. Where a metric would strengthen a bullet but none exists, leave a bracketed placeholder like `[add: peak requests/sec]` rather than guessing.
-- ATS-safe formatting only: single column, standard headings, plain text, consistent `MMM YYYY` dates, technology names spelled correctly. If a JD was given, mirror its exact hard-skill terms **only where the candidate genuinely has them**.
+Follow `references/resume-blueprint.md` for content decisions, and `references/resume-recipe.md` for the exact structure, section order, and formatting the draft must conform to (it's the canonical spec `resume-renderer` also builds to):
+- Use the recipe's section order (Header → Summary → Technical Skills → Experience → Projects → Education → Certifications → Volunteering → Languages), including only sections with real content.
+- Write every bullet in impact form — **action verb + what was built/done + scope + measurable outcome** — using only numbers that appear in the evidence. Where a metric would strengthen a bullet but none exists, leave a bracketed placeholder like `[add: peak requests/sec]` rather than guessing. Follow the recipe's writing rules (no first person, no junior filler, canonical tech spellings).
+- ATS-safe formatting only, per the recipe. If a JD was given, mirror its exact hard-skill terms **only where the candidate genuinely has them**.
+- **If the candidate has more than one honest target** (e.g. "entry-level Software Engineer" and "entry-level Full-Stack Developer"), use a tagline and summary that serve both truthfully (`Software Engineer | Full-Stack Web Developer`) rather than splitting into two weaker resumes — only when the same evidence genuinely supports both.
 
 ## Phase 5 — Deliver
 
 Write two files in `career-copilot-output/resume/` (create the folder if it doesn't exist):
-1. **`resume_draft.md`** — the finished resume in clean Markdown, ready to paste into Word/Google Docs. Open it with a short "What I emphasized and why" note (5–8 bullets).
+1. **`resume_draft.md`** — the finished resume in clean Markdown following the recipe's structure, ready to paste or to hand to `resume-renderer` for the `.docx`/PDF. Open it with a short "What I emphasized and why" note (5–8 bullets). Then offer to run `resume-renderer` to produce the final files.
 2. **`resume_evidence_map.md`** — a traceability table: every bullet/claim → the source it came from (old resume / GitHub repo / LinkedIn / candidate-confirmed). This is the honesty guarantee — anything that can't be mapped shouldn't be in the draft. End it with the open placeholders and unconfirmed items still needing the candidate's numbers or sign-off.
 
 ## Final response
@@ -56,5 +59,6 @@ Tell the user the single biggest piece of value you surfaced that their old resu
 ## References
 
 - `references/evidence-sources.md` — how to pull and what to extract from an old resume, GitHub, and LinkedIn, with the exact commands and graceful-degradation rules.
+- `references/resume-recipe.md` — the canonical ATS resume spec (document settings, section order, formatting, output) that both the draft and the rendered files conform to.
 - `references/surfacing-questions.md` — the mining playbook: categories of commonly-buried value and the targeted questions that draw them out honestly.
 - `references/resume-blueprint.md` — section menu and ordering, the impact-bullet formula, project curation, and the ATS-safe formatting rules for the draft.

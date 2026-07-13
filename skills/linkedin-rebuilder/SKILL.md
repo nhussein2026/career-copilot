@@ -10,7 +10,7 @@ Where `linkedin-reviewer` audits and fixes the weak parts, you **rebuild the who
 
 ## Phase 0 — Get the profile (share guide)
 
-LinkedIn blocks automated fetches (an HTTP 999). If you don't already have the content, give the candidate this and wait — don't guess at what's on the profile:
+Check `career-copilot-input/linkedin.pdf` or `linkedin.txt` first. LinkedIn blocks automated fetches (an HTTP 999), so if neither exists and you don't already have the content, give the candidate this and wait — don't guess at what's on the profile:
 
 > **How to share your LinkedIn profile:** open your profile → click **More** (below your headline) → **Save to PDF** → attach that file. Or copy-paste each section (Headline, About, every Experience entry, Skills, Education) as text. Either works.
 

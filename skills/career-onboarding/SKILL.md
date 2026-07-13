@@ -21,20 +21,31 @@ If they only want one thing ("just fix my resume"), skip the full plan and route
 
 Map their goal to a sequence from the suite. The canonical full flow (adapt to what they have and want):
 
-1. **`career-dossier`** — build the portable master profile once, from all their sources. Everything else can draw from it. _(Skip if they only want one narrow deliverable.)_
+**Get presentable:**
+1. **`career-dossier`** — build the portable master profile once, from all their sources. Everything else draws from it. _(Skip if they only want one narrow deliverable.)_
 2. **`resume-reviewer`** — if they already have a CV, diagnose it (score + ATS + gaps).
 3. **`resume-builder`** — build the strong, tailored resume (surfaces hidden value, evidence-mapped).
-4. **`linkedin-reviewer`** or **`linkedin-rebuilder`** — audit the LinkedIn, or fully rebuild it toward the goal.
-5. **`portfolio-reviewer`** — if they have a portfolio site, align it to the target.
-6. **`job-matcher`** — turn the background into a focused search + fit-rank specific postings.
-7. **`career-advisor`** — if there are real skill gaps or it's a career pivot, get the roadmap.
-8. **`cover-letter`** — per application: fit-gate, then write from real evidence.
+4. **`resume-renderer`** — turn the draft into the final verified PDF/DOCX to upload.
+5. **`github-reviewer`** — for technical targets: pins, profile README, repo presentation.
+6. **`linkedin-reviewer`** or **`linkedin-rebuilder`** — audit the LinkedIn, or fully rebuild it toward the goal.
+7. **`portfolio-reviewer`** — if they have a portfolio site, align it to the target.
 
-Present it as *their* plan (only the relevant steps), with a one-line reason for each and what it produces. Name the first step to do right now.
+**Search and apply:**
+8. **`job-matcher`** — turn the background into a focused search + fit-rank specific postings.
+9. **`application-tracker`** — start the tracker with the first real postings; it keeps the whole hunt's state from here on.
+10. **`career-advisor`** — if there are real skill gaps or it's a career pivot, get the roadmap.
+11. **`cover-letter`** — per application: fit-gate, then write from real evidence.
+12. **`outreach-writer`** — per application: the referral ask before applying cold, the follow-ups and thank-yous after.
+
+**Convert:**
+13. **`interview-prep`** — per interview: story bank, likely questions, honest gap answers, mock.
+14. **`offer-advisor`** — when an offer lands: value it, benchmark it, negotiate it.
+
+Present it as *their* plan (only the relevant steps — most plans are 4–6 steps, not fourteen), with a one-line reason for each and what it produces. Name the first step to do right now.
 
 ## Phase 3 — Route
 
-Kick off the first skill (or the one they asked for). Tell them outputs land in a single `career-copilot-output/` folder (`profile/`, `resume/`, `linkedin/`, `portfolio/`, `jobs/`) so everything stays organized across steps. Then proceed skill by skill, carrying results forward (the dossier and resume feed the cover letter and LinkedIn rebuild).
+Kick off the first skill (or the one they asked for). Tell them outputs land in a single `career-copilot-output/` folder (`profile/`, `resume/`, `github/`, `linkedin/`, `portfolio/`, `jobs/`) so everything stays organized across steps. Then proceed skill by skill, carrying results forward (the dossier feeds the resume, letters, and rebuilds; `jobs/applications.md` carries the search's state).
 
 ## Final response
 

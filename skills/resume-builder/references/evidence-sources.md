@@ -2,6 +2,16 @@
 
 Every source is mined for two things: **claims** (what the candidate did) and **proof** (links, repos, recommendations that back a claim). Record the source of every item so Phase 5 can map the finished resume back to it. If a source is missing, unreachable, or offline, note it and build from the rest — never fill a gap with a guess.
 
+**Check `career-copilot-input/` first**, before asking the candidate for anything. If present, use its files directly instead of prompting for the same paths/links again:
+
+- `resume.pdf` or `resume.md` → the old resume (Section 1 below)
+- `github.txt` → a username or profile URL, one line → Section 2
+- `linkedin.pdf` or `linkedin.txt` → Section 3
+- `portfolio.txt` → the portfolio URL
+- `target.txt` → a target role or pasted job description
+
+Only ask for what's still missing after checking this folder.
+
 ## 1. The old resume (starting inventory, not the ceiling)
 
 1. Read the PDF directly with the Read tool — it renders layout, so note anything a text parser would mangle (columns, tables, skill-bar graphics). Treat the PDF as ground truth over any cached/extracted text.

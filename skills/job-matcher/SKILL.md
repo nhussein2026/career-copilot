@@ -10,11 +10,13 @@ You help a candidate find and prioritize the right openings. Two modes, often bo
 
 ## Arguments
 
-- Candidate background: resume/LinkedIn/GitHub or a description — skills, experience level, and constraints (location, remote/onsite, work authorization/visa, salary floor, timeline).
-- Target role/field: the kind of role they want. If broad, narrow to 1–2 concrete titles first.
+- Candidate background: check `career-copilot-output/profile/dossier.md`, then `career-copilot-input/` (resume/GitHub/LinkedIn), before asking for a resume/LinkedIn/GitHub or a description — skills, experience level, and constraints (location, remote/onsite, work authorization/visa, salary floor, timeline).
+- Target role/field: check `career-copilot-input/target.txt` first. If broad, narrow to 1–2 concrete titles first.
 - Optional job postings: one or more URLs or pasted descriptions to score.
 
 ## Phase 1 — Define the target
+
+**Check for existing suite outputs first:** if `career-copilot-output/profile/dossier.md` or `career-copilot-output/resume/resume_draft.md` exists, pull the candidate's skills, level, and constraints from there instead of asking again.
 
 1. Settle on 1–3 concrete target job titles (roles are listed under many names — e.g. "Software Engineer", "Backend Developer", "Full-Stack Engineer"). Capture the synonyms; you'll need them for boolean queries.
 2. Lock the hard constraints: location/remote, seniority, work authorization, must-have vs nice-to-have domain.
@@ -26,6 +28,7 @@ Use `references/search-strategies.md`. Produce:
 1. **Boolean search strings** — ready to paste into LinkedIn, Google (`site:` X-ray), and the major job boards. Combine title synonyms with `OR`, required skills with `AND`, and exclude noise with `NOT`/`-`. Give one broad-recall string and one high-precision string.
 2. **Where to look** — a shortlist of the right boards/sources for this role and region (general boards, niche/specialized boards, company career pages, and community sources), with a one-line reason for each pick.
 3. **Alerts plan** — which searches to save as alerts and at what cadence, so new postings come to them instead of re-searching.
+4. **Run the search yourself (when web tools are available)** — don't stop at handing over strings. Run the X-ray and board queries with the web search tool, fetch the most promising postings, and carry them into Phase 3 as candidates to assess. Prefer fresh postings (posted within days) and note each posting's source and date. If web access isn't available, say so and deliver the strings for the candidate to run.
 
 ## Phase 3 — Assess fit (when postings are provided)
 
@@ -44,6 +47,7 @@ Write `job_search.md` in `career-copilot-output/jobs/` (create the folder if it 
 2. **Boolean strings** — broad and precise, per platform, ready to paste.
 3. **Where to look + alerts** — the shortlist and the alert cadence.
 4. **Posting assessments** (if any) — a ranked table: posting → fit verdict → gaps → top move.
+5. **Feed the tracker** — if `career-copilot-output/jobs/applications.md` exists (or the `application-tracker` skill is installed), append the Strong and Stretch postings as `found` rows per its format. Never add Weak fits — the tracker isn't a wishlist.
 
 ## Final response
 
