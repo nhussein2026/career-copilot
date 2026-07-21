@@ -84,6 +84,8 @@ Canonical spellings: Node.js (not Nodejs), React.js, MongoDB, MySQL, PostgreSQL,
 ## 8. Writing Rules (Content)
 
 - **Summary:** lead with identity + strongest evidence ("Software Engineer with hands-on production experience…"). Never "motivated to learn", "seeking opportunity", or junior-sounding filler — state capabilities as facts.
+- **Summary claims, body proves.** The summary names your strongest differentiator by *category* — "open-source contributor", "shipped full-stack projects", "led a small team" — and keeps it general. The specific proper nouns, metrics, and links (project names, star counts, repo URLs) live in the sections below, where they're evidence. Never repeat a body bullet's exact number or name in the summary; it reads as redundant and burns two of your most-skimmed lines. (This is a content rule, not a format rule — it applies no matter how the page is organized.)
+- **Quantified proof belongs in the body, phrased as context and rounded.** A star count / user count / metric makes a claim credible where the claim is made (the relevant section), not in the summary. Round it ("1,400+ stars", not "1,465") so it stays honest as it drifts over time.
 - **Bullets:** strong action verb first (Developed, Built, Refactored, Implemented, Integrated, Delivered, Designed, Led). Present tense for the current role, past for previous. Each bullet = action + technology + purpose/outcome; add numbers only where truthful.
 - No first person, no pronouns. No fabrication of metrics, links, titles, or seniority. 1–2 lines per bullet; cut adjectives before facts.
 

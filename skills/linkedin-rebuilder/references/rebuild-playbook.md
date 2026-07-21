@@ -17,11 +17,13 @@ Before rewriting anything, lock the single target role. Judge every line by: *do
 ## Headline (2 options, ≤220 chars)
 - Formula: `Target Role | Specialization / stack | value or proof`. Put the most-searched keyword (the target title) in the first ~40 chars — it's what shows on mobile and in search.
 - No buzzwords ("ninja", "guru"). Real language only.
+- **Headline claims, profile proves.** State the differentiator by *category* ("Open-source contributor") — don't cram a specific proper noun or metric into the headline (not "Open-source contributor (livecodes)", not "500+ users"); the About and Featured sections carry the specifics.
 - Give two options so the candidate can pick their voice.
 
 ## About (full rewrite)
-- **First 2–3 lines are everything** — they show before "…see more". Hook with who you are + what you do + the target.
+- **First 2–3 lines are everything** — they show before "…see more". Hook with who you are + what you do + the target — general, no specific metrics or project names (that's the headline/summary rule; keep the hook at claim level).
 - First person, concrete, in the candidate's voice — not a third-person bio, not a copy of the resume summary.
+- The later paragraphs are the proof section — here it's right to name real projects and contributions. **Round metrics** ("1,400+ stars", not "1,465") so they stay honest as they drift, and don't repeat the exact same numbers the Featured/Experience items already show.
 - Weave in the target's hard skills as natural keywords (search matches plain words), without stuffing.
 - End with a light call to action (what you're open to, how to reach you).
 

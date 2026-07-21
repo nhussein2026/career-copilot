@@ -7,7 +7,7 @@ How to turn the verified evidence inventory into the draft. Everything here assu
 Include only sections the candidate has real content for. Order by what makes *this* candidate strongest for the target:
 
 - **Contact block** (always, top, plain text) — full name, email, phone, city/country, LinkedIn URL, GitHub URL, portfolio URL. No photos, no icons carrying the only copy of the info.
-- **Summary** (2–3 lines) — role + specialization + strongest proof, aimed at the target. Written last, once you know the highlights. Skip it rather than pad it.
+- **Summary** (2–3 lines) — role + specialization + strongest proof *by category*, aimed at the target. Written last, once you know the highlights. Skip it rather than pad it. **Summary claims, body proves:** keep specific names, metrics, and links out of the summary — they're evidence, so they live in the sections below and must not be repeated here (see `resume-recipe.md` §8).
 - **Experience** — the core for anyone with work history. Reverse-chronological.
 - **Projects** — lead with this for students/career-changers, or place after Experience to show range. Curate to the **strongest ~3**, each with a verified working link.
 - **Skills** — grouped (Languages / Frameworks / Tools / Domains), honest levels, terms spelled exactly.
