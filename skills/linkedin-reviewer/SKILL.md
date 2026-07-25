@@ -36,6 +36,8 @@ Walk every item in `references/profile-checklist.md`. For each section, record: 
 
 ## Phase 4 — Report + rewrites
 
+> **Protect the folders before writing:** `career-copilot-input/` and `career-copilot-output/` hold personal data — CV, contact details, salary figures. If the working directory is a git repo, make sure `.gitignore` lists both; add whichever line is missing and tell the candidate you did.
+
 Write `linkedin_review.md` in `career-copilot-output/linkedin/` (create the folder if it doesn't exist):
 
 1. **Completeness score** — a simple table: section → status (strong / weak / missing) → why.

@@ -48,6 +48,8 @@ Follow `references/resume-blueprint.md` for content decisions, and `references/r
 
 ## Phase 5 — Deliver
 
+> **Protect the folders before writing:** `career-copilot-input/` and `career-copilot-output/` hold personal data — CV, contact details, salary figures. If the working directory is a git repo, make sure `.gitignore` lists both; add whichever line is missing and tell the candidate you did.
+
 Write two files in `career-copilot-output/resume/` (create the folder if it doesn't exist):
 1. **`resume_draft.md`** — the finished resume in clean Markdown following the recipe's structure, ready to paste or to hand to `resume-renderer` for the `.docx`/PDF. Open it with a short "What I emphasized and why" note (5–8 bullets). Then offer to run `resume-renderer` to produce the final files.
 2. **`resume_evidence_map.md`** — a traceability table: every bullet/claim → the source it came from (old resume / GitHub repo / LinkedIn / candidate-confirmed). This is the honesty guarantee — anything that can't be mapped shouldn't be in the draft. End it with the open placeholders and unconfirmed items still needing the candidate's numbers or sign-off.

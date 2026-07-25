@@ -21,6 +21,8 @@ The other skills end at a Markdown draft; this one produces the file a candidate
 
 ## Phase 2 — Build the master document
 
+> **Protect the folders before writing:** `career-copilot-input/` and `career-copilot-output/` hold personal data — CV, contact details, salary figures. If the working directory is a git repo, make sure `.gitignore` lists both; add whichever line is missing and tell the candidate you did.
+
 Build to the canonical spec in `../resume-builder/references/resume-recipe.md` (document settings, section order, header rules, date tab stops, accent color, real bullets). Two routes, in preference order — both in `references/render-guide.md`:
 
 1. **Preferred — `.docx` master (python-docx):** build the `.docx` to the recipe's settings (Calibri 10 pt, US Letter / A4, accent `#1F4E79` headings with bottom borders, right-tab dates, real list bullets, real hyperlinks with visible-URL text). This is the editable master the candidate keeps, and the source the PDF is exported from — so the two never drift.

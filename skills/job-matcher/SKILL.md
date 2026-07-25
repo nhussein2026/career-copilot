@@ -41,6 +41,8 @@ For each posting, produce a fit read:
 
 ## Phase 4 — Deliver
 
+> **Protect the folders before writing:** `career-copilot-input/` and `career-copilot-output/` hold personal data — CV, contact details, salary figures. If the working directory is a git repo, make sure `.gitignore` lists both; add whichever line is missing and tell the candidate you did.
+
 Write `job_search.md` in `career-copilot-output/jobs/` (create the folder if it doesn't exist):
 
 1. **Target roles** — the 1–3 titles and their synonyms.

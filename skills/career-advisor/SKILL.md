@@ -37,6 +37,8 @@ Lay it out as a sequenced roadmap with rough milestones (e.g. 0–1 month, 1–3
 
 ## Phase 4 — Deliver
 
+> **Protect the folders before writing:** `career-copilot-input/` and `career-copilot-output/` hold personal data — CV, contact details, salary figures. If the working directory is a git repo, make sure `.gitignore` lists both; add whichever line is missing and tell the candidate you did.
+
 Write `career_plan.md` in `career-copilot-output/profile/` (create the folder if it doesn't exist):
 
 1. **Where you are** — honest snapshot of relevant strengths and constraints.

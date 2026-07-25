@@ -40,6 +40,8 @@ Walk through every item of `references/ats-guidelines.md` against the PDF (use w
 
 ## Phase 4 — Report
 
+> **Protect the folders before writing:** `career-copilot-input/` and `career-copilot-output/` hold personal data — CV, contact details, salary figures. If the working directory is a git repo, make sure `.gitignore` lists both; add whichever line is missing and tell the candidate you did.
+
 Write `cv_review_report.md` in `career-copilot-output/resume/` (create the folder if it doesn't exist):
 
 1. **Score summary** — the rubric profile applied (and why), then a table: category, score/max, one-line evidence. Then bonus, deductions, total.

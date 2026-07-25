@@ -10,6 +10,8 @@ A real job search dies of untracked state: the follow-up never sent, the intervi
 
 ## Phase 1 — Load or initialize
 
+> **Protect the folders before writing:** `career-copilot-input/` and `career-copilot-output/` hold personal data — CV, contact details, salary figures. If the working directory is a git repo, make sure `.gitignore` lists both; add whichever line is missing and tell the candidate you did.
+
 1. Read `career-copilot-output/jobs/applications.md`. If missing, create it per `references/tracker-format.md`.
 2. On first creation, **import what already exists**: each `career-copilot-output/jobs/<company>/` folder (a cover letter there implies at least `applied` — confirm with the user), and any posting assessments in `job_search.md`, become rows.
 

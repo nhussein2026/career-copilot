@@ -45,6 +45,8 @@ Present it as *their* plan (only the relevant steps — most plans are 4–6 ste
 
 ## Phase 3 — Route
 
+> **Protect the folders before writing:** `career-copilot-input/` and `career-copilot-output/` hold personal data — CV, contact details, salary figures. If the working directory is a git repo, make sure `.gitignore` lists both; add whichever line is missing and tell the candidate you did.
+
 Kick off the first skill (or the one they asked for). Tell them outputs land in a single `career-copilot-output/` folder (`profile/`, `resume/`, `github/`, `linkedin/`, `portfolio/`, `jobs/`) so everything stays organized across steps. Then proceed skill by skill, carrying results forward (the dossier feeds the resume, letters, and rebuilds; `jobs/applications.md` carries the search's state).
 
 ## Final response

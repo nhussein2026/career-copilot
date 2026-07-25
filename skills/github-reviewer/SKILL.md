@@ -42,6 +42,8 @@ Walk `references/github-checklist.md`. Record present / weak / missing per item 
 
 ## Phase 4 — Report + rewrites
 
+> **Protect the folders before writing:** `career-copilot-input/` and `career-copilot-output/` hold personal data — CV, contact details, salary figures. If the working directory is a git repo, make sure `.gitignore` lists both; add whichever line is missing and tell the candidate you did.
+
 Write `github_review.md` in `career-copilot-output/github/` (create the folder if it doesn't exist):
 
 1. **Status table** — checklist area → status → the specific finding.

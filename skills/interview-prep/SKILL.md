@@ -40,6 +40,8 @@ Mine the evidence into **6–10 STAR stories** per `references/interview-playboo
 
 ## Phase 5 — Deliver (and offer the mock)
 
+> **Protect the folders before writing:** `career-copilot-input/` and `career-copilot-output/` hold personal data — CV, contact details, salary figures. If the working directory is a git repo, make sure `.gitignore` lists both; add whichever line is missing and tell the candidate you did.
+
 Write to `career-copilot-output/` (create folders as needed):
 1. **`profile/story_bank.md`** — the reusable story bank with theme mapping and open `[confirm: …]` items. Update it, don't duplicate it, on later runs.
 2. **`jobs/<company>/interview_prep.md`** (when a posting was given) — likely questions with answer outlines, gap answers, the walkthrough, questions to ask, and the logistics line (stage, date, format).

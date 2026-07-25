@@ -37,6 +37,8 @@ Check the rebuilt profile against `../linkedin-reviewer/references/profile-check
 
 ## Phase 4 — Deliver
 
+> **Protect the folders before writing:** `career-copilot-input/` and `career-copilot-output/` hold personal data — CV, contact details, salary figures. If the working directory is a git repo, make sure `.gitignore` lists both; add whichever line is missing and tell the candidate you did.
+
 Write `linkedin_rebuild.md` in `career-copilot-output/linkedin/` (create the folder if it doesn't exist): every section's new copy in the order it appears on the profile, ready to paste, each labeled with where it goes. Open with a 1-line "how to apply this" note and close with the profile-hygiene checklist to tick off.
 
 ## Final response

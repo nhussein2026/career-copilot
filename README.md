@@ -77,7 +77,17 @@ career-copilot-input/
 └── target.txt            # optional: target role, or a pasted job description
 ```
 
-Only add what you have — every file is optional, and a skill still works with fewer sources (it just says so). This folder is gitignored, like the output folder, so nothing personal ends up in version control.
+Only add what you have — every file is optional, and a skill still works with fewer sources (it just says so).
+
+### Keep your data out of version control
+
+`career-copilot-input/` and `career-copilot-output/` hold real personal data — your CV, phone number, email, and later your salary and negotiation notes. They are created in **your** working directory, so if that directory is a git repo, ignore them before you commit anything:
+
+```bash
+printf 'career-copilot-input/\ncareer-copilot-output/\n' >> .gitignore
+```
+
+The skills check this for you and offer to add the lines the first time they write, but the `.gitignore` is yours — verify it. Nothing is ever uploaded anywhere: every skill reads public sources (the GitHub API, your own site) and writes only local files.
 
 ## Getting started
 

@@ -30,6 +30,8 @@ Merge into one deduplicated inventory. Reconcile conflicts across sources (dates
 
 ## Phase 3 — Write the dossier
 
+> **Protect the folders before writing:** `career-copilot-input/` and `career-copilot-output/` hold personal data — CV, contact details, salary figures. If the working directory is a git repo, make sure `.gitignore` lists both; add whichever line is missing and tell the candidate you did.
+
 Write `dossier.md` in `career-copilot-output/profile/` (create the folder if it doesn't exist), following `references/dossier-structure.md`. It is complete and reusable:
 
 - **Identity & contact**, **Positioning** (a few honest angles they could target), **Skills with depth + evidence**, **Full work history** (every role, full bullets, scope), **All real projects** (name, links, stack, what it does, the candidate's role, what it proves), **Open-source contributions**, **Education**, **Certifications**, **Languages**, **Links**.

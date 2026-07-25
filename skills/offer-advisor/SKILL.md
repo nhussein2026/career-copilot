@@ -40,6 +40,8 @@ Weighted table against the candidate's *stated* priorities — not a generic rub
 
 ## Phase 6 — Deliver
 
+> **Protect the folders before writing:** `career-copilot-input/` and `career-copilot-output/` hold personal data — CV, contact details, salary figures. If the working directory is a git repo, make sure `.gitignore` lists both; add whichever line is missing and tell the candidate you did.
+
 Write `offer_review.md` in `career-copilot-output/jobs/<company>/` (create folders as needed): the comp table, the benchmark with sources, the leverage read, the plan and scripts, the comparison if any, and the questions still open. Update the tracker row (`offer`, deadline in Due) when the file exists.
 
 ## Final response

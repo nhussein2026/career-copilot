@@ -31,6 +31,8 @@ Walk `references/portfolio-checklist.md`. For each item record present / weak / 
 
 ## Phase 3 — Report + rewrites
 
+> **Protect the folders before writing:** `career-copilot-input/` and `career-copilot-output/` hold personal data — CV, contact details, salary figures. If the working directory is a git repo, make sure `.gitignore` lists both; add whichever line is missing and tell the candidate you did.
+
 Write `portfolio_review.md` in `career-copilot-output/portfolio/` (create the folder if it doesn't exist):
 
 1. **Section status table** — section → present / weak / missing → why.

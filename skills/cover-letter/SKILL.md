@@ -38,6 +38,8 @@ Follow `references/cover-letter-blueprint.md`:
 
 ## Phase 4 — Deliver
 
+> **Protect the folders before writing:** `career-copilot-input/` and `career-copilot-output/` hold personal data — CV, contact details, salary figures. If the working directory is a git repo, make sure `.gitignore` lists both; add whichever line is missing and tell the candidate you did.
+
 Write `cover_letter.md` in `career-copilot-output/jobs/<company>/` (create the folder if it doesn't exist — one subfolder per company you apply to). Under a short rule, add a "Notes" block: which proof points you used, which gap you addressed and how, and any `[confirm: …]` placeholder (e.g. a specific detail only the candidate can supply). Offer to render it to PDF (`resume-renderer`'s render routes work for letters too) and to align it with the tailored resume. When the candidate confirms they submitted, update `career-copilot-output/jobs/applications.md` (per `application-tracker`, when in use): the row flips to `applied` with the follow-up cadence as its next action.
 
 ## Final response

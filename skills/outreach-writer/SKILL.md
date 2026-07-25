@@ -31,6 +31,8 @@ Per the playbook's spec for the type. Universal rules:
 
 ## Phase 3 — Deliver
 
+> **Protect the folders before writing:** `career-copilot-input/` and `career-copilot-output/` hold personal data — CV, contact details, salary figures. If the working directory is a git repo, make sure `.gitignore` lists both; add whichever line is missing and tell the candidate you did.
+
 Append the message(s) — dated, typed, recipient noted — to `career-copilot-output/jobs/<company>/outreach.md` (create folders as needed). If the tracker file exists, update the row's Next action (e.g. "sent follow-up 2026-07-12; wait"). Tell the candidate when to send it and what the no-reply plan is (usually: one nudge per the playbook, then let it rest).
 
 ## Final response
