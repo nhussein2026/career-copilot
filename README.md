@@ -1,108 +1,135 @@
+<!-- readme-standard: 1.1 -->
 # career-copilot
 
-A suite of [Claude Code](https://claude.com/claude-code) **skills** that cover a job hunt end to end — build your master profile, write, review, and render your CV, rebuild your LinkedIn, tune your portfolio and GitHub, plan your next move, run a focused job search, track your applications, write honest cover letters and outreach, prep your interviews, and negotiate the offer. Each skill is a folder: a `SKILL.md` that tells the model how to do the job, plus `references/` files holding the detailed rubrics and checklists it loads on demand. The skills are designed to work as a set — several reuse each other's references and outputs — so install them together (the plugin does this in one command).
+## Overview
 
-**New here?** Just say *"help me get a job"* (or your goal) and [`career-onboarding`](skills/career-onboarding/) figures out which skills to run, in what order.
+career-copilot is a set of 16 [Claude Code](https://claude.com/claude-code) skills that guide a job search from start to finish: a master profile, the CV, LinkedIn, GitHub and portfolio reviews, the search itself, applications, cover letters, outreach, interviews and offers. Each skill tells the model how to do one job, and every claim it writes must trace back to a source the user gave it. The skills share references and pass results to each other, so they install together as one plugin.
 
-## The skills
+New here? Say *"help me get a job"* (or your goal) and [`career-onboarding`](skills/career-onboarding/) works out which skills to run, in what order.
+
+### The skills
 
 | Skill | What it does |
 |---|---|
-| [`career-onboarding`](skills/career-onboarding/) | The front door: learns your goal, then hands you a sequenced plan and routes you to the right skills in the right order. |
-| [`career-dossier`](skills/career-dossier/) | Consolidates your CV, GitHub, LinkedIn, and portfolio into one portable, source-tagged master profile you can paste into any AI or tool. |
-| [`resume-builder`](skills/resume-builder/) | Builds a resume from scratch by consolidating your old resume, GitHub, and LinkedIn — then surfaces the real accomplishments you under-sell, and writes an ATS-safe draft plus an evidence map tracing every claim to its source. |
-| [`resume-reviewer`](skills/resume-reviewer/) | Scores your CV like an LLM hiring screener (0–120, with rubric profiles for junior SWE, experienced SWE, and non-SWE fields), audits it for ATS-friendliness, and writes a prioritized fix list + a rewritten draft. |
-| [`resume-renderer`](skills/resume-renderer/) | The last mile: renders the Markdown draft into the final ATS-safe PDF/DOCX you actually upload, then verifies the text layer really parses. |
-| [`github-reviewer`](skills/github-reviewer/) | Audits your GitHub like a screener who clicks the link — pins, profile README, repo presentation — and writes the ready-to-paste fixes. |
-| [`linkedin-reviewer`](skills/linkedin-reviewer/) | Audits your LinkedIn profile section-by-section for recruiter appeal and search discoverability, and rewrites the weak parts. |
-| [`linkedin-rebuilder`](skills/linkedin-rebuilder/) | Rebuilds your *whole* LinkedIn toward one goal — ready-to-paste copy for every section — plus a guide for sharing your profile. |
-| [`portfolio-reviewer`](skills/portfolio-reviewer/) | Fetches your portfolio site, audits its value proposition, project presentation, links, and discoverability, and rewrites the weak parts. |
-| [`career-advisor`](skills/career-advisor/) | Assesses where you are, maps the gap to your target role, and produces a concrete roadmap — including which certifications are actually worth it in your field. |
-| [`job-matcher`](skills/job-matcher/) | Turns your background into a focused job search: boolean search strings, where to look, alerts, live searches when web tools are available, and a fit assessment for specific postings. |
-| [`application-tracker`](skills/application-tracker/) | One table for the whole hunt — status, next action, due date per application — updated in plain language, always pointing at what to do next. |
-| [`cover-letter`](skills/cover-letter/) | Gates on fit first — tells you honestly when a role isn't worth applying to — then writes a truthful, tailored cover letter from your real evidence, mapped to the posting's priorities. |
-| [`outreach-writer`](skills/outreach-writer/) | The messages around the application: referral asks, cold notes, follow-ups, thank-yous, status checks — channel-sized, honestly personalized, sent at the right time. |
-| [`interview-prep`](skills/interview-prep/) | A STAR story bank from your real evidence, per-posting likely questions, honest gap answers, a resume walkthrough, and a live mock interview. |
-| [`offer-advisor`](skills/offer-advisor/) | Values the offer (equity caveats included), benchmarks it against the market, reads your real leverage, and scripts an honest negotiation — or compares competing offers. |
+| [`career-onboarding`](skills/career-onboarding/) | The front door: learns your goal, then gives you a sequenced plan and routes you to the right skills in the right order. |
+| [`career-dossier`](skills/career-dossier/) | Consolidates your CV, GitHub, LinkedIn and portfolio into one portable, source-tagged master profile you can paste into any AI or tool. |
+| [`resume-builder`](skills/resume-builder/) | Builds a resume from your old resume, GitHub and LinkedIn, surfaces the real accomplishments you under-sell, and writes an ATS-safe draft plus an evidence map tracing every claim to its source. |
+| [`resume-reviewer`](skills/resume-reviewer/) | Scores your CV like an LLM hiring screener (0–120, with rubric profiles for junior SWE, experienced SWE and non-SWE fields), audits it for ATS-friendliness, and writes a prioritised fix list and a rewritten draft. |
+| [`resume-renderer`](skills/resume-renderer/) | Renders the Markdown draft into the final ATS-safe PDF or DOCX, then checks that the text layer really parses. |
+| [`github-reviewer`](skills/github-reviewer/) | Audits your GitHub like a screener who clicks the link (pins, profile README, repository presentation) and writes ready-to-paste fixes. |
+| [`linkedin-reviewer`](skills/linkedin-reviewer/) | Audits your LinkedIn profile section by section for recruiter appeal and search discoverability, and rewrites the weak parts. |
+| [`linkedin-rebuilder`](skills/linkedin-rebuilder/) | Rebuilds your whole LinkedIn toward one goal, with ready-to-paste copy for every section and a guide for sharing your profile. |
+| [`portfolio-reviewer`](skills/portfolio-reviewer/) | Fetches your portfolio site, audits its value proposition, project presentation, links and discoverability, and rewrites the weak parts. |
+| [`career-advisor`](skills/career-advisor/) | Assesses where you are, maps the gap to your target role, and produces a roadmap, including which certifications are worth it in your field. |
+| [`job-matcher`](skills/job-matcher/) | Turns your background into a focused search: boolean search strings, where to look, alerts, live searches when web tools are available, and a fit assessment for specific postings. |
+| [`application-tracker`](skills/application-tracker/) | One table for the whole search (status, next action and due date per application), updated in plain language. |
+| [`cover-letter`](skills/cover-letter/) | Checks fit first and tells you when a role is not worth applying to, then writes a truthful, tailored cover letter from your real evidence. |
+| [`outreach-writer`](skills/outreach-writer/) | The messages around an application: referral asks, cold notes, follow-ups, thank-yous and status checks. |
+| [`interview-prep`](skills/interview-prep/) | A STAR story bank from your real evidence, likely questions per posting, honest gap answers, a resume walkthrough and a live mock interview. |
+| [`offer-advisor`](skills/offer-advisor/) | Values the offer (equity caveats included), benchmarks it against the market, reads your real leverage, and scripts an honest negotiation or compares competing offers. |
 
-Each skill's folder (under `skills/`) contains:
+### Principles
 
-```
-skills/<skill>/
-├── SKILL.md            # the instructions (with YAML frontmatter: name + description)
-└── references/         # rubrics, checklists, and guides loaded on demand
-```
+- **Grounded, never invented.** The skills never make up experience, metrics or credentials; every claim traces back to what you provided.
+- **Honest over flattering.** They tell you when a project is tutorial-grade, when a certification is a distraction, or when a role will filter you out.
+- **Detail lives in references.** `SKILL.md` stays short; the rubrics and checklists live in `references/`, so they are easy to read, tune and reuse.
 
-## Install
+## Project Journey
 
-### As a plugin (recommended — one command, everything works together)
+I built career-copilot in July 2026 as an open-source personal project: AI tools can help with every step of a job search, but they also make up claims a candidate cannot back up, so every skill here works only from the user's own sources. It started with ten skills on 12 July 2026, grew to sixteen the next day, and is packaged as a Claude Code plugin that is also its own marketplace.
 
-This repo is a Claude Code **plugin** and its own marketplace. In Claude Code:
+- **Role:** Author and maintainer
+- **Team:** Solo
+- **Dates:** Jul 2026 – present
+- **AI use:** Written with Claude Code; the skills themselves are instructions for Claude.
+
+## Project Status
+
+**Maintained.** All 16 skills pass the validator in CI and install as one plugin; new skill ideas are listed in [Notes.md](Notes.md).
+
+## Technologies
+
+| Category | Used |
+| --- | --- |
+| Skills | Claude Code skills (`SKILL.md` with YAML frontmatter) and plugin manifests (`.claude-plugin/`) |
+| Languages | Markdown; Python 3.12 for the validator (standard library only) |
+| Infrastructure and DevOps | GitHub Actions (`validate` workflow on every push to `main` and every pull request) |
+
+## How to Run
+
+Prerequisite: [Claude Code](https://claude.com/claude-code).
+
+### As a plugin (recommended)
+
+This repository is a Claude Code plugin and its own marketplace. In Claude Code:
 
 ```
 /plugin marketplace add nhussein2026/career-copilot
 /plugin install career-copilot@career-copilot
 ```
 
-That installs all the skills at once — which also keeps the cross-skill hand-offs working (the dossier feeding the resume, the evidence map feeding the cover letter).
+This installs all the skills at once, which keeps the hand-offs between them working (the dossier feeding the resume, the evidence map feeding the cover letter).
 
 ### Manual copy
 
-Claude Code also discovers skills in two locations:
-
-- **Personal** (available in every project): `~/.claude/skills/`
-- **Project** (shared with a repo, e.g. via version control): `<your-project>/.claude/skills/`
+Claude Code also finds skills in `~/.claude/skills/` (every project) and `<your-project>/.claude/skills/` (one project):
 
 ```bash
-# all skills (recommended — several skills reuse their siblings' references)
+# all skills (recommended: several skills reuse their siblings' references)
 mkdir -p ~/.claude/skills
 cp -r skills/* ~/.claude/skills/
 
-# or a single skill — it still works alone, with a reduced version of the shared methods
+# or a single skill: it still works alone, with a reduced version of the shared methods
 cp -r skills/resume-reviewer ~/.claude/skills/
 ```
 
-After installing, start (or restart) Claude Code and the skills become available. You can confirm with `/skills` or by describing your task — Claude picks the matching skill automatically based on its `description`.
+Restart Claude Code, then confirm with `/skills` or describe your task: Claude picks the matching skill from its `description`.
 
 ### Give it your details once
 
-Drop your files into a `career-copilot-input/` folder in your working directory (next to where `career-copilot-output/` will appear) and every skill checks it automatically before asking you for anything — no need to repeat paths/links in every conversation:
+Put your files in a `career-copilot-input/` folder in your working directory, and every skill checks it before asking you for anything:
 
 ```
 career-copilot-input/
-├── resume.pdf          # or resume.md — your existing CV, any version
-├── linkedin.pdf         # "Save to PDF" export, or linkedin.txt with pasted profile text
-├── github.txt           # one line: your username or profile URL
-├── portfolio.txt         # one line: your portfolio site URL
-└── target.txt            # optional: target role, or a pasted job description
+├── resume.pdf          # or resume.md: your existing CV, any version
+├── linkedin.pdf        # "Save to PDF" export, or linkedin.txt with pasted profile text
+├── github.txt          # one line: your username or profile URL
+├── portfolio.txt       # one line: your portfolio site URL
+└── target.txt          # optional: target role, or a pasted job description
 ```
 
-Only add what you have — every file is optional, and a skill still works with fewer sources (it just says so).
+Every file is optional; a skill works with fewer sources and says which ones it is missing.
 
 ### Keep your data out of version control
 
-`career-copilot-input/` and `career-copilot-output/` hold real personal data — your CV, phone number, email, and later your salary and negotiation notes. They are created in **your** working directory, so if that directory is a git repo, ignore them before you commit anything:
+`career-copilot-input/` and `career-copilot-output/` hold real personal data: your CV, phone number, email, and later your salary and negotiation notes. If your working directory is a git repository, ignore them before you commit anything:
 
 ```bash
 printf 'career-copilot-input/\ncareer-copilot-output/\n' >> .gitignore
 ```
 
-The skills check this for you and offer to add the lines the first time they write, but the `.gitignore` is yours — verify it. Nothing is ever uploaded anywhere: every skill reads public sources (the GitHub API, your own site) and writes only local files.
+The skills check this and offer to add the lines the first time they write, but verify the `.gitignore` yourself. Nothing is uploaded anywhere: the skills read public sources (the GitHub API, your own site) and write only local files.
 
-## Getting started
+### Typical flow
 
-Not sure where to begin? Describe your goal and `career-onboarding` builds you a sequenced plan. The typical full flow:
+1. **`career-dossier`**: build your master profile once; everything else can draw from it.
+2. **`resume-reviewer`** → **`resume-builder`** → **`resume-renderer`**: diagnose your current CV, build the tailored one, render the final PDF.
+3. **`github-reviewer`**, **`linkedin-reviewer`** or **`linkedin-rebuilder`**, and **`portfolio-reviewer`**: align your other profiles to the same goal.
+4. **`job-matcher`**: find and rank the roles you fit (and **`career-advisor`** if there are real gaps); **`application-tracker`** keeps the state from here on.
+5. **`cover-letter`** and **`outreach-writer`**: per application, check fit, write from your real evidence, ask for the referral, send the follow-ups.
+6. **`interview-prep`** → **`offer-advisor`**: per interview, then when the offer arrives.
 
-1. **`career-dossier`** — build your portable master profile once (everything else can draw from it).
-2. **`resume-reviewer`** → **`resume-builder`** → **`resume-renderer`** — diagnose your current CV, build the tailored one, render the final PDF.
-3. **`github-reviewer`**, **`linkedin-reviewer`** / **`linkedin-rebuilder`**, and **`portfolio-reviewer`** — align your other surfaces to the same goal.
-4. **`job-matcher`** — find and rank the roles you actually fit (and **`career-advisor`** if there are real gaps); **`application-tracker`** keeps the state from here on.
-5. **`cover-letter`** + **`outreach-writer`** — per application: fit-gate, write from your real evidence, chase the referral, send the follow-ups.
-6. **`interview-prep`** → **`offer-advisor`** — per interview, then when the offer lands.
+Example requests:
+
+- *"Help me get a job as a full-stack engineer. Where do I start?"* → `career-onboarding`
+- *"Review my CV at `~/Downloads/resume.pdf` for this job description: …"* → `resume-reviewer`
+- *"Rebuild my whole LinkedIn around data engineering."* → `linkedin-rebuilder`
+- *"I applied to Acme on Monday. Track it. What's due this week?"* → `application-tracker`
+- *"They offered 85k base plus options. Is that fair? Help me negotiate."* → `offer-advisor`
 
 ### Where outputs go
 
-Every skill writes into one organized folder in your working directory, so a full job hunt stays tidy:
+Every skill writes into one folder in your working directory:
 
 ```
 career-copilot-output/
@@ -116,35 +143,45 @@ career-copilot-output/
                   # <company>/cover_letter.md, outreach.md, interview_prep.md, offer_review.md
 ```
 
-## Use
+### Validate the suite
 
-Just describe what you need in Claude Code and the right skill activates. For example:
+```bash
+python3 scripts/validate.py
+```
 
-- *"Help me get a job as a full-stack engineer — where do I start?"* → `career-onboarding`
-- *"Pull everything about me into one master profile I can reuse."* → `career-dossier`
-- *"Build me a resume from my old one at `~/Downloads/resume.pdf`, my GitHub (`@myhandle`), and my LinkedIn."* → `resume-builder`
-- *"Review my CV — it's at `~/Downloads/resume.pdf` — for this job description: …"* → `resume-reviewer`
-- *"Optimize my LinkedIn profile for a backend engineer role."* → `linkedin-reviewer`
-- *"Rebuild my whole LinkedIn around data engineering."* → `linkedin-rebuilder`
-- *"Review my portfolio at `myname.dev` for a frontend role."* → `portfolio-reviewer`
-- *"I'm a data analyst who wants to move into ML engineering — what's my path?"* → `career-advisor`
-- *"Help me find and rank backend jobs I'm a good fit for."* → `job-matcher`
-- *"Write me a cover letter for this job posting."* → `cover-letter`
-- *"Make my GitHub look hire-ready."* → `github-reviewer`
-- *"Export my resume as the final PDF."* → `resume-renderer`
-- *"I applied to Acme on Monday — track it. What's due this week?"* → `application-tracker`
-- *"Write a referral request to a former colleague at Stripe."* → `outreach-writer`
-- *"I have an interview Thursday for this role — prep me."* → `interview-prep`
-- *"They offered 85k base plus options — is that fair? Help me negotiate."* → `offer-advisor`
+It checks each skill's frontmatter, that every `references/` path resolves, that the plugin manifests parse, and that every skill is listed in this README. CI runs the same script.
 
-The skills are designed to work together — the `career-dossier` feeds the resume, LinkedIn, cover-letter, and interview skills; `job-matcher` tells you which keywords to mirror; the reviewers help you add them honestly; and `applications.md` carries the search's state between all of them.
+## Project Structure
 
-## Principles
+```text
+.
+├── .claude-plugin/        plugin.json and marketplace.json
+├── .github/workflows/     validate.yml: runs the validator in CI
+├── scripts/validate.py    checks the skill suite
+├── skills/<skill>/
+│   ├── SKILL.md           the instructions (YAML frontmatter: name and description)
+│   └── references/        rubrics, checklists and guides loaded on demand
+└── Notes.md               improvement ideas not yet built
+```
 
-- **Grounded, never invented.** These skills never fabricate experience, metrics, or credentials — every claim traces back to what you provided.
-- **Honest over flattering.** They tell you when a project is tutorial-grade, when a certification is a distraction, or when you'll be auto-filtered from a role.
-- **Detail lives in references.** `SKILL.md` stays lean; the rubrics and checklists live in `references/` so they're easy to read, tune, and reuse.
+## Limitations
+
+**Technical limitations**
+- Some files are duplicated across skills on purpose (the gathering method and the honesty rules), so each skill still works when installed alone.
+- There are no sample inputs or reference outputs yet, so changes to prompts and rubrics are checked by reading, not by tests.
+
+**Future improvements**
+- Ideas such as a company-researcher skill, resume variants and regional CV conventions are listed in [Notes.md](Notes.md).
+
+## Additional Documentation
+
+- [Notes.md](Notes.md): improvement ideas not yet built.
+- Each skill's `references/` folder: the rubrics and checklists that skill uses.
+
+## Contributing
+
+Issues and pull requests are welcome. Run `python3 scripts/validate.py` before opening a pull request; CI runs it too.
 
 ## License
 
-[MIT](LICENSE).
+[MIT](LICENSE) © 2026 Nasser Hussein
