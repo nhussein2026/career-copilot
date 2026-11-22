@@ -3,7 +3,7 @@
 
 ## Overview
 
-career-copilot is a set of 16 [Claude Code](https://claude.com/claude-code) skills that guide a job search from start to finish: a master profile, the CV, LinkedIn, GitHub and portfolio reviews, the search itself, applications, cover letters, outreach, interviews and offers. Each skill tells the model how to do one job, and every claim it writes must trace back to a source the user gave it. The skills share references and pass results to each other, so they install together as one plugin.
+career-copilot is a set of 17 [Claude Code](https://claude.com/claude-code) skills that guide a job search from start to finish: a master profile, the CV, LinkedIn, GitHub and portfolio reviews, the search itself, applying on LinkedIn, tracking applications, cover letters, outreach, interviews and offers. Each skill tells the model how to do one job, and every claim it writes must trace back to a source the user gave it. The skills share references and pass results to each other, so they install together as one plugin.
 
 New here? Say *"help me get a job"* (or your goal) and [`career-onboarding`](skills/career-onboarding/) works out which skills to run, in what order.
 
@@ -22,6 +22,7 @@ New here? Say *"help me get a job"* (or your goal) and [`career-onboarding`](ski
 | [`portfolio-reviewer`](skills/portfolio-reviewer/) | Fetches your portfolio site, audits its value proposition, project presentation, links and discoverability, and rewrites the weak parts. |
 | [`career-advisor`](skills/career-advisor/) | Assesses where you are, maps the gap to your target role, and produces a roadmap, including which certifications are worth it in your field. |
 | [`job-matcher`](skills/job-matcher/) | Turns your background into a focused search: boolean search strings, where to look, alerts, live searches when web tools are available, and a fit assessment for specific postings. |
+| [`linkedin-applier`](skills/linkedin-applier/) | Applies on LinkedIn in your own browser: triages postings, uploads the right resume, prefills Easy Apply and drafts screener answers from an answer bank you approved. It never submits; you review and click Submit. |
 | [`application-tracker`](skills/application-tracker/) | One table for the whole search (status, next action and due date per application), updated in plain language. |
 | [`cover-letter`](skills/cover-letter/) | Checks fit first and tells you when a role is not worth applying to, then writes a truthful, tailored cover letter from your real evidence. |
 | [`outreach-writer`](skills/outreach-writer/) | The messages around an application: referral asks, cold notes, follow-ups, thank-yous and status checks. |
@@ -32,11 +33,12 @@ New here? Say *"help me get a job"* (or your goal) and [`career-onboarding`](ski
 
 - **Grounded, never invented.** The skills never make up experience, metrics or credentials; every claim traces back to what you provided.
 - **Honest over flattering.** They tell you when a project is tutorial-grade, when a certification is a distraction, or when a role will filter you out.
+- **You stay in control.** Nothing is submitted, sent or uploaded for you; the applier fills in forms and stops at the review screen.
 - **Detail lives in references.** `SKILL.md` stays short; the rubrics and checklists live in `references/`, so they are easy to read, tune and reuse.
 
 ## Project Journey
 
-I built career-copilot in July 2026 as an open-source personal project: AI tools can help with every step of a job search, but they also make up claims a candidate cannot back up, so every skill here works only from the user's own sources. It started with ten skills on 12 July 2026, grew to sixteen the next day, and is packaged as a Claude Code plugin that is also its own marketplace.
+I built career-copilot in July 2026 as an open-source personal project: AI tools can help with every step of a job search, but they also make up claims a candidate cannot back up, so every skill here works only from the user's own sources. It started with ten skills on 12 July 2026, grew to sixteen the next day and to seventeen with `linkedin-applier`, and is packaged as a Claude Code plugin that is also its own marketplace.
 
 - **Role:** Author and maintainer
 - **Team:** Solo
@@ -45,7 +47,7 @@ I built career-copilot in July 2026 as an open-source personal project: AI tools
 
 ## Project Status
 
-**Maintained.** All 16 skills pass the validator in CI and install as one plugin; new skill ideas are listed in [Notes.md](Notes.md).
+**Maintained.** All 17 skills pass the validator in CI and install as one plugin; new skill ideas are listed in [Notes.md](Notes.md).
 
 ## Technologies
 
@@ -116,14 +118,16 @@ The skills check this and offer to add the lines the first time they write, but 
 2. **`resume-reviewer`** → **`resume-builder`** → **`resume-renderer`**: diagnose your current CV, build the tailored one, render the final PDF.
 3. **`github-reviewer`**, **`linkedin-reviewer`** or **`linkedin-rebuilder`**, and **`portfolio-reviewer`**: align your other profiles to the same goal.
 4. **`job-matcher`**: find and rank the roles you fit (and **`career-advisor`** if there are real gaps); **`application-tracker`** keeps the state from here on.
-5. **`cover-letter`** and **`outreach-writer`**: per application, check fit, write from your real evidence, ask for the referral, send the follow-ups.
-6. **`interview-prep`** → **`offer-advisor`**: per interview, then when the offer arrives.
+5. **`linkedin-applier`**: work a small batch of postings in your own browser: triage, prefill, honest screener answers; you click Submit.
+6. **`cover-letter`** and **`outreach-writer`**: per application, check fit, write from your real evidence, ask for the referral, send the follow-ups.
+7. **`interview-prep`** → **`offer-advisor`**: per interview, then when the offer arrives.
 
 Example requests:
 
 - *"Help me get a job as a full-stack engineer. Where do I start?"* → `career-onboarding`
 - *"Review my CV at `~/Downloads/resume.pdf` for this job description: …"* → `resume-reviewer`
 - *"Rebuild my whole LinkedIn around data engineering."* → `linkedin-rebuilder`
+- *"Apply to the junior React roles on LinkedIn. Fill the forms; I'll click Submit."* → `linkedin-applier`
 - *"I applied to Acme on Monday. Track it. What's due this week?"* → `application-tracker`
 - *"They offered 85k base plus options. Is that fair? Help me negotiate."* → `offer-advisor`
 
@@ -139,7 +143,8 @@ career-copilot-output/
 ├── github/       # github_review.md
 ├── linkedin/     # linkedin_review.md, linkedin_rebuild.md
 ├── portfolio/    # portfolio_review.md
-└── jobs/         # job_search.md, applications.md (the tracker), and per company:
+└── jobs/         # job_search.md, applications.md (the tracker),
+                  # linkedin_apply_brief.md (your screener answer bank), and per company:
                   # <company>/cover_letter.md, outreach.md, interview_prep.md, offer_review.md
 ```
 
@@ -169,6 +174,7 @@ It checks each skill's frontmatter, that every `references/` path resolves, that
 **Technical limitations**
 - Some files are duplicated across skills on purpose (the gathering method and the honesty rules), so each skill still works when installed alone.
 - There are no sample inputs or reference outputs yet, so changes to prompts and rubrics are checked by reading, not by tests.
+- `linkedin-applier` drives LinkedIn in your own browser. LinkedIn's User Agreement prohibits bots and automated access, and bulk activity can get an account restricted, so the skill works in small batches at reading speed, never submits, and declines mass-apply requests. It needs browser tools (such as Claude in Chrome); without them it writes a brief to paste into a browser agent instead.
 
 **Future improvements**
 - Ideas such as a company-researcher skill, resume variants and regional CV conventions are listed in [Notes.md](Notes.md).
